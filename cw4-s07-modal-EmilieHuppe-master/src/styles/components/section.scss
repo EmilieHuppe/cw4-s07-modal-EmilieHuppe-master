@@ -1,0 +1,15 @@
+/* ==========================================================================
+   SECTION / COMPONENTS
+   ========================================================================== */
+
+.section {
+    padding: var(--spacing-md) calc(var(--spacing-md) / 2);
+    display: grid;
+    gap: 30px;
+    grid-template-columns: 1fr;
+}
+
+.section__title {
+    grid-template: 2 / -2;
+    text-align: center;
+}

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Timtools | CW4.S07</title>
+
+        <link rel="stylesheet" href="styles/main.css" />
+
+        <script src="scripts/main.js" defer></script>
+    </head>
+
+    <body>
+        <div class="site-container">
+            <!-- Zone header -->
+            <header class="header">
+                <a href="#" class="header__brand">
+                    <img src="assets/images/logo-timtools.svg" alt="TimTools" />
+                </a>
+                <button
+                    type="button"
+                    class="header__toggle"
+                    aria-haspopup="true"
+                >
+                    <img src="assets/images/icon-menu.svg" alt="" />
+                    <div class="u-hidden-visually">Accéder au menu</div>
+                </button>
+            </header>
+
+            <!-- Zone hero -->
+            <section class="hero">
+                <div class="wrapper grid">
+                    <h1 class="hero__title">
+                        <br />Le coffre à outils <br />que tu&nbsp;attendais
+                    </h1>
+                    <div class="hero__content card">héro</div>
+                </div>
+            </section>
+
+            <!-- Zone grille -->
+            <section class="section">
+                <div class="wrapper">
+                    <h2 class="section__title">modal statique</h2>
+                    <div class="cards">
+                        <a href="#" data-component="Modal" data-modal-id="tpl-modal">
+                            <article class="card">1</article></a
+                        >
+                    </div>
+                </div>
+            </section>
+
+            <!-- Zone grille -->
+            <section class="section">
+                <div class="wrapper">
+                    <h2 class="section__title">
+                        Une grille qui contient plus que des outils
+                    </h2>
+                    <div class="cards">
+                        <a href="#" data-component="Modal" data-modal-id="tpl-modal-tool" data-modal-title="scie"> <article class="card">scie</article></a>
+                        <a href="#" data-component="Modal" data-modal-id="tpl-modal-tool" data-modal-title="pelle"> <article class="card">pelle</article></a>
+                        <a href="#" data-component="Modal" data-modal-id="tpl-modal-tool" data-modal-title="pince"> <article class="card">pince</article></a>
+                        <a href="#" data-component="Modal" data-modal-id="tpl-modal-tool" data-modal-title="lime"> <article class="card">lime</article></a>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <template id="tpl-modal">
+            <div class="modal">
+                <div class="modal_scrim"></div>
+                <div class="modal_box">
+                    <div class="modal_content">
+                        <h2>Ta premiere modal the timetool</h2>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur, adipisicing
+                            elit. Magnam, cum assumenda quas totam modi nisi
+                            provident possimus illo quo, magni ducimus natus!
+                            Maxime culpa, officiis sunt cupiditate dolores
+                            dolorum accusamus.
+                        </p>
+                    </div>
+                    <button class="modal__close js-close"> </button>
+                </div>
+            </div>
+        </template>
+        <template id="tpl-modal-tool">
+            <div class="modal">
+                <div class="modal_scrim"></div>
+                <div class="modal_box">
+                    <div class="modal_content">
+                        <h2>Tu as choisie la {{title}}</h2> <!-- Fait attention a ne pas mettre d'espace dans le nom de la variable entre double éperluette -->
+                        <p>
+                            bla bla bla la {{title}}. bon choix.
+                        </p>
+                    </div>
+                    <button class="modal__close js-close"> </button>
+                </div>
+            </div>
+        </template>
+    </body>
+</html>
